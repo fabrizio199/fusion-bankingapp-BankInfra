@@ -1,0 +1,22 @@
+resource "aws_sns_topic" "18005551212" {
+  name = "18005551212"
+
+  policy = <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AWSConfigSNSPolicy20180202",
+      "Action": [
+        "*"
+      ],
+      "Effect": "Allow",
+      "Resource": "aws_sns_topic.positive4.arn",
+      "Principal": {
+        "AWS": "*"
+      }
+    }
+  ]
+}
+EOF
+}
